@@ -6,10 +6,15 @@ public class UpperString {
     public String solution(String str) {
         String answer = "";
         for (char i : str.toCharArray()) {
-            if (Character.isUpperCase(i)) {
-                answer += Character.toLowerCase(i);
+//            if (Character.isUpperCase(i)) {
+//                answer += Character.toLowerCase(i);
+//            }else{
+//                answer += Character.toUpperCase(i);
+//            }
+            if (i >= 65 && i <=90) {
+                answer += (char)(i+32);
             }else{
-                answer += Character.toUpperCase(i);
+                answer += (char)(i-32);
             }
         }
         return answer;
