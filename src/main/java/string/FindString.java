@@ -3,7 +3,6 @@ package string;
 import java.util.Scanner;
 
 public class FindString {
-
     public int solution(String str, char ch) {
         int count = 0;
         String uppStr = str.toUpperCase();
