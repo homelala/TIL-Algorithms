@@ -1,26 +1,28 @@
 package string;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Password {
-    public int solution(String str, char ch) {
-        int count = 0;
-        String uppStr = str.toUpperCase();
-        char uppCh = Character.toUpperCase(ch);
-        for (char i : uppStr.toCharArray()) {
-            if (i == uppCh) {
-                count += 1;
-            }
+    public String solution(int count, String str) {
+        String answer = "";
+        for(int i = 0; i <count; i++){
+            String temp = str.substring(0,7)
+                    .replace("#","1")
+                    .replace("*","0");
+            int i1 = Integer.parseInt(temp, 2);
+            answer += (char)i1;
+            str = str.substring(7);
         }
-        return count;
+
+        return answer;
     }
 
     public static void main(String[] args) {
-        FindString T = new FindString();
+        Password T = new Password();
         Scanner sc = new Scanner(System.in);
+        int count = sc.nextInt();
         String input1 = sc.next();
-        char input2 = sc.next().charAt(0);
 
-        System.out.println(T.solution(input1, input2));
+        System.out.println(T.solution(count, input1));
     }
 }
