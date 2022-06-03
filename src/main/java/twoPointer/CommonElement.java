@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// 2. 공통 원소
 public class CommonElement {
     public ArrayList<Integer> solution(int num1, int num2, int[] arr1, int[] arr2) {
         ArrayList<Integer> answer = new ArrayList<>();
