@@ -7,12 +7,13 @@ import java.util.Scanner;
 public class ContinuousArray {
     public int solution(int num1, int num2, int[] arr1) {
         int answer = 0;
-        int left = 0, sum = arr1[0];
-        for (int right = 0; right < num2; right++) {
+        int left = 0, sum = 0;
+        for (int right = 0; right < num1; right++) {
             sum += arr1[right];
             if(sum == num2) answer++;
+
             while (sum >= num2) {
-                sum -= arr1[left];
+                sum -= arr1[left++];
                 if(sum == num2) answer++;
             }
         }
